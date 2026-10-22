@@ -1,0 +1,23 @@
+﻿
+> vicenza_eventos@0.1.0 build
+> next build
+
+Ôû▓ Next.js 16.4.2 (Turbopack)
+Ô£ô Running next.config.ts took 42ms
+- Cache Components enabled
+- Partial Prefetching enabled
+- Experiments (use with caution):
+  Ô£ô agentFeedback
+
+  Creating an optimized production build ...
+Ô£ô Compiled successfully in 1052ms
+  Running TypeScript ...
+src/components/ui.tsx(39,13): error TS2304: Cannot find name 'whatsappLink'.
+node.exe : Failed to type check.
+No linha:1 caractere:1
++ & "E:\Program Files (x86)/node.exe" "E:\Program Files (x86)/node_modu ...
++ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (Failed to type check.:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+

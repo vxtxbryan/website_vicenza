@@ -1,26 +1,129 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+@theme {
+  --color-paper: #f5f1ea;
+  --color-sand: #eae3d6;
+  --color-ink: #0c3a5b;
+  --color-ink-deep: #082b45;
+  --color-brand: #b9a15c;
+  --color-brand-deep: #8c7536;
+  --color-body: #1b2a38;
+  --color-muted: #5b6773;
 }
 
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --font-sans: var(--font-montserrat), system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+html {
+  scroll-behavior: smooth;
+}
+
+section[id] {
+  scroll-margin-top: 4.5rem;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background: var(--color-paper);
+  color: var(--color-body);
+}
+
+/* faixa de texto em movimento */
+.marquee-track {
+  display: flex;
+  width: max-content;
+  animation: marquee 35s linear infinite;
+}
+@keyframes marquee {
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+/* entrada ao rolar: o texto só é escondido depois que o JavaScript confirma */
+.reveal[data-state="hidden"] {
+  opacity: 0;
+}
+.reveal[data-state="visible"] {
+  animation: fade-up 0.8s ease both;
+  animation-delay: var(--delay, 0ms);
+}
+
+/* entrada do hero (ao carregar) */
+.fade-up {
+  animation: fade-up 0.9s ease both;
+  animation-delay: var(--delay, 0ms);
+}
+
+@keyframes fade-up {
+  from {
+    opacity: 0;
+    transform: translateY(28px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+/* mapa: rotas desenhadas e cidades surgindo */
+.rota {
+  stroke-dasharray: 1;
+}
+[data-state="hidden"] .rota {
+  stroke-dashoffset: 1;
+}
+[data-state="visible"] .rota {
+  animation: draw 1.4s ease both;
+  animation-delay: calc(var(--i, 0) * 70ms);
+}
+@keyframes draw {
+  from {
+    stroke-dashoffset: 1;
+  }
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+.cidade {
+  transform-box: fill-box;
+  transform-origin: center;
+}
+[data-state="hidden"] .cidade {
+  opacity: 0;
+}
+[data-state="visible"] .cidade {
+  animation: pop 0.5s ease both;
+  animation-delay: calc(var(--i, 0) * 70ms + 600ms);
+}
+@keyframes pop {
+  from {
+    opacity: 0;
+    transform: scale(0);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* quem prefere menos movimento no sistema vê tudo parado */
+@media (prefers-reduced-motion: reduce) {
+  .marquee-track,
+  .fade-up,
+  .reveal[data-state="visible"],
+  [data-state="visible"] .rota,
+  [data-state="visible"] .cidade {
+    animation: none;
+  }
+  .reveal[data-state="hidden"] {
+    opacity: 1;
+  }
+  [data-state="hidden"] .rota {
+    stroke-dashoffset: 0;
+  }
+  [data-state="hidden"] .cidade {
+    opacity: 1;
+  }
 }

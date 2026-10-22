@@ -7,7 +7,7 @@ export default function Footer() {
       <div className="mx-auto max-w-7xl px-6 py-14 grid md:grid-cols-3 gap-10">
         <div>
           <div className="flex items-center gap-3">
-            <Image src="/logo.png" alt="Vicenza Eventos" width={42} height={42} />
+            <Image src="/logo.png" alt="" width={42} height={42} />
             <span className="text-lg font-extrabold uppercase tracking-tight">
               Vicenza <span className="text-brand">Eventos</span>
             </span>

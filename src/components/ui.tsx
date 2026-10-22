@@ -1,3 +1,4 @@
+﻿import Image from "next/image";
 import { whatsappLink } from "@/data/site";
 
 export function Eyebrow({ children, escuro = false }: { children: React.ReactNode; escuro?: boolean }) {
@@ -45,13 +46,23 @@ export function BotaoZap({
   );
 }
 
-export function Foto({ src, className = "", children }: { src: string; className?: string; children?: React.ReactNode }) {
+export function Foto({
+  src,
+  alt = "",
+  className = "",
+  priority = false,
+  sizes = "(min-width: 1280px) 1280px, 100vw",
+}: {
+  src: string;
+  alt?: string;
+  className?: string;
+  priority?: boolean;
+  sizes?: string;
+}) {
+  const posicionado = /\b(absolute|fixed|sticky|relative)\b/.test(className);
   return (
-    <div
-      className={`bg-cover bg-center bg-ink/20 ${className}`}
-      style={{ backgroundImage: `url('${src}?w=1400&q=70')` }}
-    >
-      {children}
+    <div className={`${posicionado ? "" : "relative"} overflow-hidden bg-ink/20 ${className}`}>
+      <Image src={src} alt={alt} fill sizes={sizes} priority={priority} className="object-cover" />
     </div>
   );
 }

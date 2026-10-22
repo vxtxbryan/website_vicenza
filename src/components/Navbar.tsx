@@ -9,9 +9,9 @@ export default function Navbar() {
 
   return (
     <header className="fixed top-0 inset-x-0 z-50 bg-ink text-white border-b border-white/10">
-      <nav className="mx-auto max-w-7xl flex items-center justify-between px-6 py-3">
+      <nav aria-label="Principal" className="mx-auto max-w-7xl flex items-center justify-between px-6 py-3">
         <a href="#topo" className="flex items-center gap-3">
-          <Image src="/logo.png" alt="Vicenza Eventos" width={42} height={42} priority />
+          <Image src="/logo.png" alt="" width={42} height={42} priority />
           <span className="text-lg font-extrabold tracking-tight uppercase">
             Vicenza <span className="text-brand">Eventos</span>
           </span>
@@ -41,7 +41,9 @@ export default function Navbar() {
 
         <button
           onClick={() => setOpen(!open)}
-          aria-label="Abrir menu"
+          aria-label={open ? "Fechar menu" : "Abrir menu"}
+          aria-expanded={open}
+          aria-controls="menu-mobile"
           className="lg:hidden text-sm font-bold uppercase tracking-widest"
         >
           {open ? "Fechar" : "Menu"}
@@ -49,7 +51,7 @@ export default function Navbar() {
       </nav>
 
       {open && (
-        <ul className="lg:hidden bg-ink-deep px-6 pb-6 flex flex-col gap-2">
+        <ul id="menu-mobile" className="lg:hidden bg-ink-deep px-6 pb-6 flex flex-col gap-2">
           {menu.map((l) => (
             <li key={l.href}>
               <a href={l.href} onClick={() => setOpen(false)} className="block py-2 text-lg font-semibold">

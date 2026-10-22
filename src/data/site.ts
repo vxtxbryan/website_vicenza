@@ -11,6 +11,22 @@ export function whatsappLink(
   return `https://wa.me/${WHATSAPP.replace(/[^0-9]/g, "")}?text=${encodeURIComponent(msg)}`;
 }
 
+// ---------- SEO ----------
+export const SITE_URL = "https://vicenzaeventos.com"; // confirme o domínio final, sem barra no fim
+export const SITE_NOME = "Vicenza Eventos";
+export const INDEXAVEL = true; // mude para true no dia do lançamento
+export const GOOGLE_VERIFICATION = ""; // código do Search Console (opcional)
+export const TITULO_SEO = "Agência de eventos e live marketing em SP";
+export const DESCRICAO_SEO =
+  "Agência de eventos e live marketing em São Paulo: ativações em festivais, convenções, lançamentos de produto e eventos esportivos em todo o Brasil.";
+export const TELEFONE_E164 = `+${WHATSAPP.replace(/[^0-9]/g, "")}`;
+export const ENDERECO_SCHEMA = {
+  rua: "Avenida Paulista, 1399",
+  cidade: "São Paulo",
+  uf: "SP",
+  pais: "BR",
+};
+
 export const menu = [
   { href: "#agencia", label: "Agência" },
   { href: "#solucoes", label: "Soluções" },

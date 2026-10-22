@@ -13,12 +13,12 @@ export default function Hero() {
           loop
           playsInline
           preload="metadata"
-          poster={`${fotos.convencao}?w=1400&q=70`}
+          poster={fotos.convencao}
         >
           <source src={HERO_VIDEO} type="video/mp4" />
         </video>
       ) : (
-        <Foto src={fotos.convencao} className="absolute inset-0" />
+        <Foto src={fotos.convencao} className="absolute inset-0" priority sizes="100vw" />
       )}
       <div className="absolute inset-0 bg-linear-to-t from-ink-deep via-ink-deep/75 to-ink-deep/30" />
 

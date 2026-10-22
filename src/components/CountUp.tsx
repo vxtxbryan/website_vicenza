@@ -22,6 +22,7 @@ export default function CountUp({ to, prefix = "", suffix = "", duration = 1800 
     if (menosMovimento || !("IntersectionObserver" in window)) return;
 
     let raf = 0;
+    let raf0 = 0;
 
     const animar = () => {
       const inicio = performance.now();
@@ -34,7 +35,8 @@ export default function CountUp({ to, prefix = "", suffix = "", duration = 1800 
       raf = requestAnimationFrame(passo);
     };
 
-    setValor(0);
+    // começa em 0 só quando a animação vai rodar (assíncrono, para não disparar render em cascata)
+    raf0 = requestAnimationFrame(() => setValor(0));
     const io = new IntersectionObserver(
       ([entry]) => {
         if (entry.isIntersecting) {
@@ -49,6 +51,7 @@ export default function CountUp({ to, prefix = "", suffix = "", duration = 1800 
     return () => {
       io.disconnect();
       cancelAnimationFrame(raf);
+      cancelAnimationFrame(raf0);
     };
   }, [to, duration]);
 

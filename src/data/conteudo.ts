@@ -1,10 +1,11 @@
 const U = "https://images.unsplash.com";
+const Q = "?w=1600&q=75&auto=format&fit=crop";
 export const fotos = {
-  festival: `${U}/photo-1501281668745-f7f57925c3b4`,
-  publico: `${U}/photo-1429962714451-bb934ecdc4ec`,
-  convencao: `${U}/photo-1540575467063-178a50c2df87`,
-  palco: `${U}/photo-1505373877841-8d25f7d46678`,
-  festa: `${U}/photo-1492684223066-81342ee5ff30`,
+  festival: `${U}/photo-1501281668745-f7f57925c3b4${Q}`,
+  publico: `${U}/photo-1429962714451-bb934ecdc4ec${Q}`,
+  convencao: `${U}/photo-1540575467063-178a50c2df87${Q}`,
+  palco: `${U}/photo-1505373877841-8d25f7d46678${Q}`,
+  festa: `${U}/photo-1492684223066-81342ee5ff30${Q}`,
 };
 
 export const solucoes = [
@@ -147,7 +148,35 @@ export const brasil = [
 ];
 
 // Use só marcas reais atendidas, com autorização da cliente
-export const marcas = ["Marca 01", "Marca 02", "Marca 03", "Marca 04", "Marca 05", "Marca 06", "Marca 07", "Marca 08"];
+export const marcas = [
+  { nome: "Shopping ABC", logo: "/marcas/shoppingabc.png" },
+  // { nome: "Nome da marca", logo: "/marcas/arquivo.png" },
+
+  { nome: "Banco Sicoob", logo: "/marcas/sicoob.png" },
+  // { nome: "Nome da marca", logo: "/marcas/arquivo.png" },
+
+  { nome: "São Bernardo Plaza Shopping", logo: "/marcas/saobernardo.png" },
+  // { nome: "Nome da marca", logo: "/marcas/arquivo.png" },
+
+  { nome: "Shopping ABC", logo: "/marcas/shoppingabc.png" },
+  // { nome: "Nome da marca", logo: "/marcas/arquivo.png" },
+
+  { nome: "Shopping ABC", logo: "/marcas/shoppingabc.png" },
+  // { nome: "Nome da marca", logo: "/marcas/arquivo.png" },
+
+  { nome: "Shopping ABC", logo: "/marcas/shoppingabc.png" },
+  // { nome: "Nome da marca", logo: "/marcas/arquivo.png" },
+
+  { nome: "Shopping ABC", logo: "/marcas/shoppingabc.png" },
+  // { nome: "Nome da marca", logo: "/marcas/arquivo.png" },
+  
+  { nome: "Shopping ABC", logo: "/marcas/shoppingabc.png" },
+  // { nome: "Nome da marca", logo: "/marcas/arquivo.png" },
+
+
+
+
+];
 
 export const faq = [
   { p: "A Vicenza é agência ou produtora?", r: "Agência. Começamos no briefing, com estratégia e criação, e seguimos até a desmontagem." },

@@ -4,7 +4,15 @@ import { useState } from "react";
 import { Eyebrow, Titulo, BotaoZap } from "@/components/ui";
 import Reveal from "@/components/Reveal";
 import { solucoes } from "@/data/conteudo";
-import { EMAIL, INSTAGRAM_URL, INSTAGRAM_USER, ENDERECO, WHATSAPP, whatsappLink } from "@/data/site";
+import {
+  EMAIL,
+  INSTAGRAM_URL,
+  INSTAGRAM_USER,
+  ENDERECO,
+  WHATSAPP,
+  TELEFONE_E164,
+  whatsappLink,
+} from "@/data/site";
 
 const campo =
   "w-full rounded-xl bg-white/5 border border-white/20 px-4 py-3 text-white placeholder:text-white/40 focus:outline-none focus:border-brand";
@@ -42,8 +50,18 @@ export default function Contato() {
           </ul>
 
           <ul className="mt-12 space-y-3 text-sm text-white/80">
-            <li>WhatsApp: +{WHATSAPP}</li>
-            <li>E-mail: {EMAIL}</li>
+            <li>
+              Telefone e WhatsApp:{" "}
+              <a href={`tel:${TELEFONE_E164}`} className="underline">
+                +{WHATSAPP}
+              </a>
+            </li>
+            <li>
+              E-mail:{" "}
+              <a href={`mailto:${EMAIL}`} className="underline">
+                {EMAIL}
+              </a>
+            </li>
             <li>
               Instagram:{" "}
               <a href={INSTAGRAM_URL} target="_blank" rel="noopener noreferrer" className="underline">
@@ -72,10 +90,10 @@ export default function Contato() {
                 setEnviado(true);
               }}
             >
-              <input className={campo} name="nome" placeholder="Nome completo" required />
-              <input className={campo} name="email" type="email" placeholder="E-mail" required />
-              <input className={campo} name="assunto" placeholder="Assunto" />
-              <textarea className={campo} name="mensagem" rows={5} placeholder="Mensagem" required />
+              <input className={campo} name="nome" placeholder="Nome completo" aria-label="Nome completo" autoComplete="name" required />
+              <input className={campo} name="email" type="email" placeholder="E-mail" aria-label="E-mail" autoComplete="email" required />
+              <input className={campo} name="assunto" placeholder="Assunto" aria-label="Assunto" />
+              <textarea className={campo} name="mensagem" rows={5} placeholder="Mensagem" aria-label="Mensagem" required />
               <button
                 type="submit"
                 className="px-8 py-4 rounded-full bg-brand text-ink-deep font-bold hover:bg-white transition-colors"

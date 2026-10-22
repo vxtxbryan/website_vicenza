@@ -19,6 +19,8 @@ export default function Cases() {
             <Reveal as="article" key={c.titulo} className="grid lg:grid-cols-2 gap-10 items-center">
               <Foto
                 src={c.foto}
+                alt={`${c.titulo}: ${c.tipo}`} // troque pela descrição real da foto
+                sizes="(min-width: 1024px) 600px, 100vw"
                 className={`aspect-4/3 rounded-3xl ${i % 2 ? "lg:order-2" : ""}`}
               />
               <div>
@@ -54,7 +56,7 @@ export default function Cases() {
         <ul className="mt-6 grid sm:grid-cols-3 gap-4">
           {bastidores.map((b, i) => (
             <Reveal as="li" key={b.legenda} delay={i * 90}>
-              <Foto src={b.foto} className="aspect-4/3 rounded-2xl" />
+              <Foto src={b.foto} alt={b.legenda} sizes="(min-width: 640px) 33vw, 100vw" className="aspect-4/3 rounded-2xl" />
               <p className="mt-3 text-sm text-muted">{b.legenda}</p>
             </Reveal>
           ))}

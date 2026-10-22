@@ -10,7 +10,7 @@ export default function Brasil() {
           <Eyebrow>Todo o Brasil</Eyebrow>
           <Titulo>Atendemos todo o Brasil.</Titulo>
           <p className="mt-6 text-muted leading-relaxed">
-            Nossa base fica em [cidade da agência], mas o projeto vai aonde a sua marca precisa
+            Nossa base fica em São Paulo, mas o projeto vai aonde a sua marca precisa
             estar. Quem criou é quem monta e opera.
           </p>
           <ul className="mt-10 space-y-6">

@@ -3,21 +3,34 @@
 > next build
 
 Ôû▓ Next.js 16.4.2 (Turbopack)
-Ô£ô Running next.config.ts took 42ms
+Ô£ô Running next.config.ts took 34ms
 - Cache Components enabled
 - Partial Prefetching enabled
 - Experiments (use with caution):
   Ô£ô agentFeedback
 
   Creating an optimized production build ...
-Ô£ô Compiled successfully in 1052ms
+Ô£ô Compiled successfully in 731ms
   Running TypeScript ...
-src/components/ui.tsx(39,13): error TS2304: Cannot find name 'whatsappLink'.
-node.exe : Failed to type check.
-No linha:1 caractere:1
-+ & "E:\Program Files (x86)/node.exe" "E:\Program Files (x86)/node_modu ...
-+ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-    + CategoryInfo          : NotSpecified: (Failed to type check.:String) [], RemoteException
-    + FullyQualifiedErrorId : NativeCommandError
- 
+  Finished TypeScript in 1528ms ...
+  Collecting page data using 10 workers ...
+  Generating static pages using 10 workers (0/9) ...
+  Generating static pages using 10 workers (2/9) 
+  Generating static pages using 10 workers (4/9) 
+  Generating static pages using 10 workers (6/9) 
+Ô£ô Generating static pages using 10 workers (9/9) in 897ms
+  Finalizing page optimization ...
+
+Route (app)
+Ôöî Ôùï /
+Ôö£ Ôùï /_not-found
+Ôö£ Ôùï /apple-icon.png
+Ôö£ Ôùï /icon.png
+Ôö£ ãÆ /opengraph-image
+Ôö£ Ôùï /robots.txt
+Ôöö Ôùï /sitemap.xml
+
+
+Ôùï  (Static)   prerendered as static content
+ãÆ  (Dynamic)  server-rendered on demand
 

@@ -13,10 +13,12 @@ import Marcas from "@/components/Marcas";
 import Faq from "@/components/Faq";
 import Contato from "@/components/Contato";
 import Footer from "@/components/Footer";
+import JsonLd from "@/components/JsonLd";
 
 export default function Home() {
   return (
-    <main>
+    <main id="conteudo">
+      <JsonLd />
       <Hero />
       <Numeros />
       <Marquee />

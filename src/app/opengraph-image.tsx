@@ -36,7 +36,7 @@ export default async function OpenGraphImage() {
           Agência de eventos e live marketing
         </div>
         <div style={{ display: "flex", marginTop: 32, fontSize: 32, color: "#b9a15c" }}>
-          Do briefing ao último detalhe. Em todo o Brasil.
+          Do briefing ao último detalhe. No Sul e no Sudeste.
         </div>
       </div>
     ),

@@ -7,6 +7,7 @@ import {
   INSTAGRAM_URL,
   ENDERECO_SCHEMA,
   DESCRICAO_SEO,
+  ESTADOS_ATENDIDOS,
 } from "@/data/site";
 
 export default function JsonLd() {
@@ -37,7 +38,7 @@ export default function JsonLd() {
           addressRegion: ENDERECO_SCHEMA.uf,
           addressCountry: ENDERECO_SCHEMA.pais,
         },
-        areaServed: { "@type": "Country", name: "Brasil" },
+        areaServed: ESTADOS_ATENDIDOS.map((nome) => ({ "@type": "State", name: nome })),
         sameAs: [INSTAGRAM_URL],
         makesOffer: solucoes.map((s) => ({
           "@type": "Offer",

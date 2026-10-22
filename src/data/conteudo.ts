@@ -115,7 +115,7 @@ export const etapas = [
   { titulo: "Estratégia e conceito", texto: "Definimos o que o público vai viver e o que a marca precisa conquistar." },
   { titulo: "Projeto criativo", texto: "Direção de arte, 3D, roteiro, projeto técnico e proposta com escopo e preço claros." },
   { titulo: "Produção", texto: "Cenografia, comunicação visual, conteúdo e tecnologia preparados pelo nosso time." },
-  { titulo: "Logística e montagem", texto: "Transporte, equipe e montagem em qualquer cidade, com cronograma e segurança." },
+  { titulo: "Logística e montagem", texto: "Transporte, equipe e montagem nas cidades atendidas, com cronograma e segurança.." },
   { titulo: "Operação ao vivo", texto: "No dia, direção técnica e artística no comando de roteiro, equipe e atendimento." },
   { titulo: "Desmontagem e entrega", texto: "Desmontamos, devolvemos o espaço como recebemos e fechamos o projeto com você." },
 ];
@@ -142,9 +142,9 @@ export const tudoEmCasa = {
 };
 
 export const brasil = [
-  { titulo: "Logística coordenada por nós", texto: "Transporte de cenografia, equipamento e equipe planejado junto com o projeto." },
-  { titulo: "O mesmo time em campo", texto: "Você não troca de interlocutor quando o evento muda de cidade." },
-  { titulo: "Todas as regiões", texto: "Norte, Nordeste, Centro-Oeste, Sudeste e Sul, com o mesmo padrão de entrega." },
+  { titulo: "Base em São Paulo", texto: "Atendemos a partir da capital paulista, com a logística planejada junto com o projeto." },
+  { titulo: "Sete estados atendidos", texto: "São Paulo, Rio de Janeiro, Minas Gerais, Espírito Santo, Paraná, Santa Catarina e Rio Grande do Sul." },
+  { titulo: "Equipe única do início ao fim", texto: "Quem recebe o briefing acompanha a montagem e a operação do evento." },
 ];
 
 // Use só marcas reais atendidas, com autorização da cliente
@@ -180,7 +180,7 @@ export const marcas = [
 
 export const faq = [
   { p: "A Vicenza é agência ou produtora?", r: "Agência. Começamos no briefing, com estratégia e criação, e seguimos até a desmontagem." },
-  { p: "Vocês atendem fora da cidade da agência?", r: "Sim, atendemos todo o Brasil. Equipe, cenografia e técnica viajam juntas, com a logística coordenada por nós." },
+  { p: "Vocês atendem fora da cidade da agência?", r: "Sim. Atendemos os sete estados do Sul e do Sudeste, com equipe, cenografia e técnica viajando juntas e a logística coordenada por nós." },
   { p: "Que tipos de projeto vocês fazem?", r: "Ativações em festivais, convenções e eventos corporativos, lançamentos de produto, eventos esportivos, experiências de marca, festivais próprios, estandes, eventos infantis e ações em feiras e shoppings." },
   { p: "O que vocês produzem em casa?", r: "Texto de exemplo: descreva aqui o que a agência realmente produz internamente e o que faz com parceiros." },
   { p: "Como funciona o orçamento?", r: "Depois do briefing, você recebe uma proposta com escopo claro e preço transparente." },

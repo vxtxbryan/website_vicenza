@@ -42,12 +42,8 @@ export default function Reveal({ children, className = "", delay = 0, as: Tag = 
     );
     io.observe(el);
 
-    // segurança: se algo falhar, o conteúdo aparece depois de 4 segundos
-    const seguranca = window.setTimeout(() => setEstado("visible"), 4000);
-
     return () => {
       io.disconnect();
-      window.clearTimeout(seguranca);
     };
   }, []);
 

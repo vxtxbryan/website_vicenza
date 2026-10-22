@@ -1,6 +1,5 @@
 import Hero from "@/components/Hero";
 import Numeros from "@/components/Numeros";
-import Marquee from "@/components/Marquee";
 import Agencia from "@/components/Agencia";
 import Solucoes from "@/components/Solucoes";
 import PorQueNos from "@/components/PorQueNos";
@@ -21,7 +20,6 @@ export default function Home() {
       <JsonLd />
       <Hero />
       <Numeros />
-      <Marquee />
       <Agencia />
       <Solucoes />
       <PorQueNos />
@@ -34,7 +32,7 @@ export default function Home() {
       <TudoEmCasa />
       <Brasil />
       <CtaCotacao
-        titulo="Seu evento em qualquer cidade do país."
+        titulo="Seu evento em qualquer cidade do Sul e do Sudeste."
         texto="Com o mesmo time do briefing à desmontagem."
       />
       <Marcas />

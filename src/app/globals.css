@@ -3,8 +3,8 @@
 @theme {
   --color-paper: #f5f1ea;
   --color-sand: #eae3d6;
-  --color-ink: #0c3a5b;
-  --color-ink-deep: #082b45;
+  --color-ink: #003756;
+  --color-ink-deep: #003756;
   --color-brand: #b9a15c;
   --color-brand-deep: #776225;
   --color-body: #1b2a38;
@@ -26,18 +26,6 @@ section[id] {
 body {
   background: var(--color-paper);
   color: var(--color-body);
-}
-
-/* faixa de texto em movimento */
-.marquee-track {
-  display: flex;
-  width: max-content;
-  animation: marquee 35s linear infinite;
-}
-@keyframes marquee {
-  to {
-    transform: translateX(-50%);
-  }
 }
 
 /* entrada ao rolar: o texto só é escondido depois que o JavaScript confirma */
@@ -110,7 +98,6 @@ body {
 
 /* quem prefere menos movimento no sistema vê tudo parado */
 @media (prefers-reduced-motion: reduce) {
-  .marquee-track,
   .fade-up,
   .reveal[data-state="visible"],
   [data-state="visible"] .rota,

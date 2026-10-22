@@ -8,7 +8,7 @@ export default function Navbar() {
   const [open, setOpen] = useState(false);
 
   return (
-    <header className="fixed top-0 inset-x-0 z-50 bg-ink text-white border-b border-white/10">
+    <header className="fixed top-0 inset-x-0 z-50 bg-ink text-white border-b border-white/20">
       <nav aria-label="Principal" className="mx-auto max-w-7xl flex items-center justify-between px-6 py-3">
         <a href="#topo" className="flex items-center gap-3">
           <Image src="/logo.png" alt="" width={42} height={42} priority />

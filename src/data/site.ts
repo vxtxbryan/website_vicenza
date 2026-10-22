@@ -1,6 +1,7 @@
 export const WHATSAPP = "55 (11) 96287-2424"; 
 export const HERO_VIDEO = ""; // quando tiver o vídeo: "/videos/hero.mp4"
 export const EMAIL = "brunamesquita@vicenzaeventos.com";
+export const EMAIL_REMETENTE_SITE = "site@vicenzaeventos.com.br";
 export const INSTAGRAM_URL = "https://www.instagram.com/vicenza.eventos/";
 export const INSTAGRAM_USER = "@vicenza.eventos";
 export const ENDERECO = "Avenida Paulista 1399, São Paulo - SP";

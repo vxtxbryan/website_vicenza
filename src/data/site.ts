@@ -14,7 +14,7 @@ export function whatsappLink(
 // ---------- SEO ----------
 export const SITE_URL = "https://vicenzaeventos.com"; // confirme o domínio final, sem barra no fim
 export const SITE_NOME = "Vicenza Eventos";
-export const INDEXAVEL = true; // mude para true no dia do lançamento
+export const INDEXAVEL = false; // mude para true no dia do lançamento
 export const GOOGLE_VERIFICATION = ""; // código do Search Console (opcional)
 export const TITULO_SEO = "Agência de eventos e live marketing em SP";
 export const DESCRICAO_SEO =

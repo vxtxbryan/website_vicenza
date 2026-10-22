@@ -12,7 +12,6 @@ import {
   INSTAGRAM_USER,
   ENDERECO,
   WHATSAPP,
-  TELEFONE_E164,
   whatsappLink,
 } from "@/data/site";
 
@@ -57,17 +56,17 @@ export default function Contato() {
             ))}
           </ul>
 
-          <ul className="mt-12 space-y-4 text-sm text-white/80">
-            <li className="flex items-center gap-3">
+          <ul className="mt-12 max-w-lg divide-y divide-white/15 border-y border-white/15 text-sm font-normal text-white md:text-base">
+            <li className="flex items-center gap-4 py-4">
               <span className={iconeBox}>
                 <IconeWhatsapp />
               </span>
               <span className="sr-only">Telefone e WhatsApp:</span>
-              <a href={`tel:${TELEFONE_E164}`} className={linkContato}>
+              <a href={whatsappLink()} target="_blank" rel="noopener noreferrer" className={linkContato}>
                 +{WHATSAPP}
               </a>
             </li>
-            <li className="flex items-center gap-3">
+            <li className="flex items-center gap-4 py-4">
               <span className={iconeBox}>
                 <IconeEmail />
               </span>
@@ -76,7 +75,7 @@ export default function Contato() {
                 {EMAIL}
               </a>
             </li>
-            <li className="flex items-center gap-3">
+            <li className="flex items-center gap-4 py-4">
               <span className={iconeBox}>
                 <IconeInstagram />
               </span>
@@ -85,7 +84,7 @@ export default function Contato() {
                 {INSTAGRAM_USER}
               </a>
             </li>
-            <li className="flex items-center gap-3">
+            <li className="flex items-center gap-4 py-4">
               <span className={iconeBox}>
                 <IconeLocal />
               </span>
@@ -98,7 +97,7 @@ export default function Contato() {
         <Reveal delay={120} className="rounded-3xl bg-white/5 border border-white/10 p-8">
           <h3 className="text-2xl font-extrabold">Enviar contato</h3>
           <p className="mt-2 text-sm text-white/60">
-            Conte para nós o que você precisa. A mensagem chega direto para nossa equipe.
+            Conte o que você precisa. A mensagem chega direto em {EMAIL}.
           </p>
 
           {estado.status === "ok" ? (

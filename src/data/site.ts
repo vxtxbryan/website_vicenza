@@ -1,4 +1,4 @@
-export const WHATSAPP = "55 (11) 96287-2424"; 
+export const WHATSAPP = "55 11 96287-2424"; 
 export const HERO_VIDEO = ""; // quando tiver o vídeo: "/videos/hero.mp4"
 export const EMAIL = "brunamesquita@vicenzaeventos.com";
 export const EMAIL_REMETENTE_SITE = "site@vicenzaeventos.com.br";

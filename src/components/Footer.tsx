@@ -23,11 +23,6 @@ export default function Footer() {
               </a>
             </li>
           ))}
-          <li>
-            <a href={INSTAGRAM_URL} target="_blank" rel="noopener noreferrer" className="hover:text-brand transition-colors">
-              Instagram
-            </a>
-          </li>
         </ul>
 
         <div className="md:text-right">
